@@ -1,0 +1,15 @@
+.main-cont {
+    background-image: url("./images/Rectangle\ 14.png"), url("./images/бабочка\ лого\ 2.png");
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.mess {
+    font-size: 70px;
+    font-family: 'El Messiri';
+    line-height: 80px;
+    color: #8B806A;
+    position: absolute;
+    top: 59%;
+    left: 34%;
+}

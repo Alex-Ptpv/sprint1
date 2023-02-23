@@ -1,9 +1,12 @@
 body {
     box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .home-body {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("./images/manuel-moreno-DGa0LQ0yDPc-unsplash\ 1.png");
     margin: 0;
+    background-size: cover;
 }
 .main-head, .main-foot {
     background-color:  rgba(0, 0, 0, 0.3);
