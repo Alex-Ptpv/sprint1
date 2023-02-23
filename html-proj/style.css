@@ -1,3 +1,107 @@
 body {
     box-sizing: border-box;
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("./images/manuel-moreno-DGa0LQ0yDPc-unsplash\ 1.png");
+    margin: 0;
+}
+.main-head, .main-foot {
+    background-color:  rgba(0, 0, 0, 0.3);
+    width: 100%;
+    height: 13vh;
+}
+.main-nav {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    list-style: none;
+    color: #FFFFFF;
+    font-size: 28px;
+    height: 13vh;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+}
+.main-cont-wrap {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.nav-item a {
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.nav-item a:hover {
+    color: #DDAD4F;
+}
+.main-logo {
+    transform: scale(.8) rotate(320deg);
+}
+.main-title {
+    color: #FFFFFF;
+    font-size: 100px;
+    font-weight: normal;
+    font-family: 'Playfair Display SC';
+}
+.main-title span {
+    color: #DDAD4F;
+}
+.main-form {
+    background-color: #8B7D62;
+    color: #FFFFFF;
+    border-radius: 6px;
+    display: flex;
+}
+.inpt-label {
+    display: flex;
+    flex-direction: column;
+}
+.inpt-label span {
+    padding-left: 8px;
+    font-size: 22px;
+    line-height: 24px;
+    padding-top: 3px;
+}
+.main-form input {
+    height: 42px;
+}
+.src-btn {
+    color: #FFFFFF;
+    background-color: #DDAD4F;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    width: 154px;
+    height: 73px;
+    font-size: 24px;
+    margin-left: 20px;
+}
+.form-wrap {
+    display: flex;
+    justify-content: space-around;
+    font-family: 'El Messiri', sans-serif;
+    border: 10px solid #FFFFFF;
+    border-top: none;
+    padding: 0 30px 30px 30px;
+    margin: 30px;
+}
+.inpt-label:first-child {
+    border-bottom-left-radius: 6px;
+}
+.inpt-label input {
+    outline: none;
+    border: 1px solid #8B7D62;
+}
+.fst {
+    border-bottom-left-radius: 6px;
+}
+.lst {
+    border-bottom-right-radius: 6px;
+}
+.main-foot {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #FFFFFF;
+    font-size: 18px;
 }
