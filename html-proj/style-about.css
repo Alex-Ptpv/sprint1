@@ -1,0 +1,46 @@
+.aboutus-body {
+    background-image: url("./images/image\ 1.png");
+    margin: 0;
+    position: relative;
+    min-height: 100vh;
+}
+.aboutus-body main h1 {
+    color: #FFFFFF;
+    margin: 0;
+}
+.main-about {
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+}
+.main-title .w {
+    font-size: 100px;
+    color: #FFFFFF;
+}
+.main-title {
+    font-size: 78px;
+    line-height: 76px;
+}
+.stars-wrap {
+    display: flex;
+    width: 30%;
+    justify-content: space-around;
+    border-bottom: 1px solid #FFFFFF;
+    padding: 24px;
+}
+.about-art {
+    color: #FFFFFF;
+    width: 92%;
+    font-size: 25px;
+    text-align: center;
+    border: 10px solid #FFFFFF;
+    border-top: 0;
+    padding: 30px;
+}
+.main-foot {
+    position: absolute;
+    bottom: 0;
+}
