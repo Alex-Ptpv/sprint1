@@ -1,0 +1,26 @@
+.rooms-body {
+    background-image: url("./images/20140609-Sand-Ripples.jpeg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100wh;
+    margin: 0;
+}
+.rooms {
+    color: #FFFFFF;
+    background-color: #293A32;
+    font-size: 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.rooms p {
+    font-size: 72px;
+    color: #DDAD4F;
+}
+.rooms span {
+    text-align: center;
+}
+.main-table {
+    
+}
