@@ -1,0 +1,17 @@
+body {
+    box-sizing: border-box;
+}
+.home-body {
+    background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("./images/edvin-johansson-rlwE8f8anOc-unsplash\ \(1\)\ 1.png");
+    margin: 0;
+}
+
+.service-title {
+    color: #FFFFFF;
+    width: 445px;
+    height: 85px;
+    font-size: 100px;
+    font-weight: normal;
+    font-family: 'Playfair Display SC'; 
+    padding-top:190px;
+}
