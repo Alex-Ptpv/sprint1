@@ -1,15 +1,61 @@
+.err-body {
+    margin: 0;
+}
 .main-cont {
-    background-image: url("./images/Rectangle\ 14.png"), url("./images/бабочка\ лого\ 2.png");
-    height: 80vh;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4) ), url("./images/Rectangle\ 14.png");
+    height: 100vh;
     width: 100%;
     background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    z-index: 1;
 }
 .mess {
     font-size: 70px;
     font-family: 'El Messiri';
     line-height: 80px;
-    color: #8B806A;
+    color: #FBEDD2;
     position: absolute;
-    top: 59%;
-    left: 34%;
+    top: 45%;
+    width: 100%;
+    text-align: center;
+}
+.btf-img {
+    background-image: url("./images/бабочка\ лого\ 2.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    position: absolute;
+    top: 5%;
+    left: 25%;
+    z-index: 2;
+    min-width: 50vw;
+    min-height: 40vh;
+}
+.home-btn {
+    width: 200px;
+    height: 80px;
+    background-color: #645E54;
+    border: none;
+    border-radius: 40px;
+    border: 4px solid #9D772D;
+}
+.home-btn a {
+    font-family: 'El Messiri';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 74px;
+    text-decoration: none;
+    color: #FBEDD2;
+    width: 100%;
+    display: inline-block;
+    height: 100%;
+}
+.main-foot {
+    height: 15vh;
+}
+.home-btn:hover {
+    opacity: .7;
 }
