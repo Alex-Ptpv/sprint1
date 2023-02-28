@@ -1,17 +1,89 @@
 body {
     box-sizing: border-box;
+
+}
+   
+h4 {
+    color:azure;
+    font-family: 'Playfair Display SC';
 }
 .home-body {
     background: linear-gradient( rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2) ), url("./images/edvin-johansson-rlwE8f8anOc-unsplash\ \(1\)\ 1.png");
+   
+    width: 1437px;
+    height: 725px;
+    left: -11px;
+    top: 0px;
     margin: 0;
+    background-repeat: no-repeat;
 }
 
 .service-title {
     color: #FFFFFF;
     width: 445px;
     height: 85px;
-    font-size: 100px;
+    font-size: 64px;
     font-weight: normal;
-    font-family: 'Playfair Display SC'; 
-    padding-top:190px;
+    font-family: 'Playfair Display SC';
+    padding-top: 90px; 
 }
+
+.main-form { background-image: url(./images/Rectangle\ 24.svg)
+    background-repeat= no-repeat;
+    background-size: cover;
+    width: 100vw;
+    margin: 0;
+}
+
+.form-wrap {
+    display: flex;
+    height: 200px
+    justify-content; space-around:
+    font-family: 'El Messiri', sans-serif;
+    border: 10px solid #FFFFFF;
+    border-bottom: none;
+    padding: 0 30px 50px 30px;
+    margin: 10px 30px -100px 30px;
+   
+}
+.charlie-brown {background-image: url(./images/Rectangle\ 24.svg);
+    position:relative;
+    width: 100%;
+    z-index: 6;
+    
+
+}
+.foot-bg {
+    box-sizing: border-box;
+    background-image: url(./images/Rectangle\ 25.svg);
+    position: absolute;
+    width: 1439px;
+    height: 403px;
+    left: 0px;
+    top: 440px;
+    z-index: 3;
+    
+    
+}
+
+.container {
+    display: grid;
+    grid-template-columns: [first] 234px [line2] 234px [line3] 234px [col4-start] 234px [five] 185px [end];
+    grid-template-rows: [first] 60px [line2] 111px [line3] 280px [end];
+    grid-gap: 8px;
+    font-size: 24px;
+    font-weight: 700px;
+    font-family: 'Playfair Display SC';
+    text-align: right;
+    left:40px;
+    padding-left: 75px;
+    padding-top: 20px;
+    
+  }
+  .box2 {
+    max-width: 180px;
+  }
+
+
+
+   
