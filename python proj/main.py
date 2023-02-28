@@ -151,3 +151,48 @@ print(f"                                                  HST-------------------
 print(f"                                                  Total-------------------{claim_total_dsp:>8}")
 print(f"")
 print(f"-----------------------------------------------------------------------------------")
+
+def display_menu():
+    """Displays the menu options to the user."""
+    print("NL Chocolate Company")
+    print("Travel Claims Processing System")
+    print("1. Enter an Employee Travel Claim.")
+    print("2. Fun Interview Question.")
+    print("3. Cool Stuff with Strings and Dates.")
+    print("4. Something Old, Something New")
+    print("5. Quit Program.")
+
+def validate_input():
+    """Validates user input to allow only values 1-5."""
+    while True:
+        choice = input("Enter choice (1-5): ")
+        if choice.isdigit() and int(choice) in range(1,6):
+            return int(choice)
+        else:
+            print("Invalid input. Please enter a number between 1 and 5.")
+
+# main program
+display_menu()
+choice = validate_input()
+
+while choice != 5:
+    if choice == 1:
+        # function for option 1
+        pass
+    elif choice == 2:
+        # function for option 2
+        pass
+    elif choice == 3:
+        # function for option 3
+        pass
+    elif choice == 4:
+        # function for option 4
+        pass
+    else:
+        print("Invalid input. Please enter a number between 1 and 5.")
+        
+    # get user input again
+    display_menu()
+    choice = validate_input()
+
+print("Thank you for using the Travel Claims Processing System!")
