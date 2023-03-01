@@ -1,5 +1,7 @@
 import datetime
 
+import console
+
 # main program menu
 
 def display_menu():
@@ -189,7 +191,7 @@ def ncc_travel():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
-    choise_func(choice)
+    choice_func(choice)
 
 # FizzBuzz task
 
@@ -206,7 +208,7 @@ def fizz_buzz():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
-    choise_func(choice)
+    choice_func(choice)
 
 def emp_inf():
     import datetime
@@ -234,7 +236,7 @@ def emp_inf():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
-    choise_func(choice)
+    choice_func(choice)
 
 def console():
 
@@ -254,10 +256,10 @@ def console():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
-    choise_func(choice)
+    choice_func(choice)
 
 
-def choise_func(val):
+def choice_func(val):
     while val != 5:
         if val == 1:
             ncc_travel()
@@ -272,7 +274,7 @@ def choise_func(val):
         exit
 
 display_menu()
-choise = validate_input()
-choise_func(choise)
+choice = validate_input()
+choice_func(choice)
 
 
