@@ -123,6 +123,10 @@ font-size: 24px;
 line-height: 27px;
 border: none;
 position: relative;
+cursor: pointer;
+}
+.cnt-btn:hover {
+    opacity: .7;
 }
 .btn-form {
     display: flex;
@@ -146,6 +150,10 @@ position: relative;
 .cnt-btn img {
     position: absolute;
     right: -16px;
+    cursor: pointer;
+}
+.cnt-btn img:hover {
+    opacity: .7;
 }
 .conts-foot {
     display: flex;
@@ -161,6 +169,9 @@ position: relative;
     justify-content: space-around;
     width: 250px;
     padding: 0;
+}
+.conts-foot ul li:hover {
+    opacity: .7;
 }
 .conts-foot p {
     font-family: 'Philosopher';
