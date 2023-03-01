@@ -44,3 +44,18 @@
 .main-foot-room {
     position: static;
 }
+.grid-item {
+    display: flex;
+    align-items: start;
+    justify-content: left;
+}
+.grid-item div {
+    padding: 20px;
+    background-color: #3393d7;
+    font-size: 20px;
+    width: 100px;
+    text-align: center;
+}
+.grid-item span {
+    color: #dfc99c;
+}
