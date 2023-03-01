@@ -1,121 +1,178 @@
-# Project: NL Chocolate Company Employee Travel Claim
-# Written by: Josh White
+# Project: Sprint 1
+# Written by: Group 2
 # Date Written: Feb. 21, 2023
 
-import datetime
+def display_menu():
+    """Displays the menu options to the user."""
+    print("NL Chocolate Company")
+    print("Travel Claims Processing System")
+    print("1. Enter an Employee Travel Claim.")
+    print("2. Fun Interview Question.")
+    print("3. Cool Stuff with Strings and Dates.")
+    print("4. Something Old, Something New")
+    print("5. Quit Program.")
 
 
-# CONSTANTS
+def validate_input():
+    """Validates user input to allow only values 1-5."""
+    while True:
+        choice = input("Enter choice (1-5): ")
+        if choice.isdigit() and int(choice) in range(1, 6):
+            return int(choice)
+        else:
+            print("Invalid input. Please enter a number between 1 and 5.")
 
 
-perdiem_rate = float(85)
-mileage_rate = float(.17)
-rental_rate = float(65)
-hst_rate = float(.15)
-max_days = datetime.timedelta(days=7)
+# main program
 
 
 
+display_menu()
+choice = validate_input()
 
-
-
-# USER INPUTS
-while True:
-    emp_num = (input("Please input your 5 digit Employee Number: "))
-    if len(emp_num) > 5:
-        print("Employee number must be 5 characters, please try again ")
-    elif len(emp_num) < 5:
-        print("Employee number must be 5 characters, please try again ")
-    elif not emp_num.isdigit():
-        print("Employee Number must contain numeric input only, please try again: ")
+while choice != 5:
+    if choice == 1:
+        # function for option 1
+        pass
+    elif choice == 2:
+        # function for option 2
+        pass
+    elif choice == 3:
+        # function for option 3
+        pass
+    elif choice == 4:
+        # function for option 4
+        pass
     else:
-        break
+        print("Invalid input. Please enter a number between 1 and 5.")
 
-first_name = input("Please enter your first name: ").title()
-last_name = input("Please enter your last name: ").title()
-trip_loc = input("Please enter your trip location: ").title()
+    # get user input again
+    display_menu()
+    choice = validate_input()
 
-while True:
-    claim_type = input("Please enter ClaimType (S/E): ").upper()
-    if claim_type != "S" and claim_type != "E":
+print("Thank you for using the Travel Claims Processing System!")
+
+
+def NLCCTravelClaim():
+
+
+    import datetime
+
+    #TRAVEL CLAIM PROGRAM
+
+
+    # CONSTANTS
+    perdiem_rate = float(85)
+    mileage_rate = float(.17)
+    rental_rate = float(65)
+    hst_rate = float(.15)
+    max_days = datetime.timedelta(days=7)
+
+
+
+
+
+
+    # USER INPUTS
+    while True:
+        emp_num = (input("Please input your 5 digit Employee Number: "))
+        if len(emp_num) > 5:
+          print("Employee number must be 5 characters, please try again ")
+        elif len(emp_num) < 5:
+         print("Employee number must be 5 characters, please try again ")
+        elif not emp_num.isdigit():
+         print("Employee Number must contain numeric input only, please try again: ")
+        else:
+            break
+
+    first_name = input("Please enter your first name: ").title()
+    last_name = input("Please enter your last name: ").title()
+    trip_loc = input("Please enter your trip location: ").title()
+
+    while True:
+     claim_type = input("Please enter ClaimType (S/E): ").upper()
+     if claim_type != "S" and claim_type != "E":
         print("Error, please try again")
-    else:
-        break
-
-while True:
-    car = input("Please enter if car is owned or rented (O or R): ").upper()
-    if car =="":
-        print("Cannot be left blank, please try again")
-    elif car != "O" and car != "R":
-        print("Enter only O or R for owned or rented ")
-    else:
-        break
-
-
-while True:
-    tot_km = float(input("Please enter your total KM: "))
-    if tot_km > 2000:
-        print("KM limit exceeded, try again ")
-    else:
-        break
-
-
-
-while True:
-   try:
-    start_date = input("Enter the start date (YYYY-MM-DD): ")
-    start_date = datetime.datetime.strptime(start_date, "%Y-%m-%d")
-   except:
-       print("Start date is not valid, enter in format given")
-   else:
-    break
-
-
-while True:
-     end_date = input("Enter the end date (YYYY-MM-DD): ")
-     end_date = datetime.datetime.strptime(end_date, "%Y-%m-%d")
-     if start_date > end_date:
-         print("please try again")
-     elif end_date - start_date > max_days:
-         print("Exceeds total allowable days, try again")
      else:
          break
 
+    while True:
+        car = input("Please enter if car is owned or rented (O or R): ").upper()
+        if car =="":
+            print("Cannot be left blank, please try again")
+        elif car != "O" and car != "R":
+            print("Enter only O or R for owned or rented ")
+        else:
+         break
 
-#CALCULATIONS
-num_days = (end_date - start_date).days
-perdiem = (num_days * perdiem_rate)
 
-if car == "O":
-    mile_amt = mileage_rate * tot_km
-else:
-    mile_amt = num_days * 65.00
+    while True:
+        if car == "O":
+         tot_km = float(input("Please enter your total KM: "))
+         if tot_km > 2000:
+              print("KM limit exceeded, try again ")
+            else:
+             break
+        else:
+         break
 
 
-if num_days > 3:
-    bonus = 100
-elif tot_km > 1000:
-    bonus = tot_km * .04
-elif claim_type == "E":
-    bonus = 45.00
-elif start_date.month == 12 and start_date.day == 15:
-    bonus = 50.00
-elif start_date.month == 12 and start_date.day == 16:
-    bonus = 50.00
-elif start_date.month == 12 and start_date.day == 17:
-    bonus = 50.00
-elif start_date.month == 12 and start_date.day == 18:
-    bonus = 50.00
-elif start_date.month == 12 and start_date.day == 19:
-    bonus = 50.00
-elif start_date.month == 12 and start_date.day == 20:
-    bonus = 50.00
-elif start_date.month == 12 and start_date.day == 21:
-    bonus = 50.00
-elif start_date.month == 12 and start_date.day == 22:
-    bonus = 50.00
-else:
-    bonus = 0
+
+    while True:
+     try:
+        start_date = input("Enter the start date (YYYY-MM-DD): ")
+        start_date = datetime.datetime.strptime(start_date, "%Y-%m-%d")
+     except:
+       print("Start date is not valid, enter in format given")
+     else:
+        break
+
+
+    while True:
+        end_date = input("Enter the end date (YYYY-MM-DD): ")
+        end_date = datetime.datetime.strptime(end_date, "%Y-%m-%d")
+        if start_date > end_date:
+             print("please try again")
+        elif end_date - start_date > max_days:
+          print("Exceeds total allowable days, try again")
+        else:
+         break
+
+
+    #CALCULATIONS
+    num_days = (end_date - start_date).days
+    perdiem = (num_days * perdiem_rate)
+
+    if car == "O":
+      mile_amt = mileage_rate * tot_km
+    else:
+     mile_amt = num_days * 65.00
+
+
+    if num_days > 3:
+        bonus = 100
+    elif tot_km > 1000:
+     bonus = tot_km * .04
+    elif claim_type == "E":
+        bonus = 45.00
+    elif start_date.month == 12 and start_date.day == 15:
+        bonus = 50.00 * num_days
+    elif start_date.month == 12 and start_date.day == 16:
+     bonus = 50.00 * num_days
+    elif start_date.month == 12 and start_date.day == 17:
+     bonus = 50.00 * num_days
+    elif start_date.month == 12 and start_date.day == 18:
+     bonus = 50.00 * num_days
+    elif start_date.month == 12 and start_date.day == 19:
+     bonus = 50.00 * num_days
+    elif start_date.month == 12 and start_date.day == 20:
+     bonus = 50.00 * num_days
+    elif start_date.month == 12 and start_date.day == 21:
+     bonus = 50.00 * num_days
+    elif start_date.month == 12 and start_date.day == 22:
+     bonus = 50.00 * num_days
+    else:
+     bonus = 0
 
 claim_amt = perdiem + mile_amt +bonus
 hst = claim_amt*hst_rate
@@ -124,33 +181,36 @@ claim_total = claim_amt + hst
 #FORMATTING
 start_date_dsp = (start_date.strftime("%d-%b-%y"))
 end_date_dsp = (end_date.strftime("%d-%b-%y"))
-perdiem_dsp = "${:,.2f}".format(perdiem)
-mile_amt_dsp = "${:,.2f}".format(mile_amt)
-tot_km_dsp = "${:,.2f}".format(tot_km)
-bonus_dsp = "${:,.0}".format(bonus)
-hst_dsp = "${:,.2f}".format(hst)
-claim_total_dsp ="${:,.2f}".format(claim_total)
+    perdiem_dsp = "${:,.2f}".format(perdiem)
+    mile_amt_dsp = "${:,.2f}".format(mile_amt)
+    tot_km_dsp = "${:,.2f}".format(tot_km)
+    bonus_dsp = "${:,.0}".format(bonus)
+    hst_dsp = "${:,.2f}".format(hst)
+    claim_total_dsp ="${:,.2f}".format(claim_total)
 
-#OUTPUT
+    #OUTPUT
 
-print(f"")
-print(f"                     *--*---**--***---***---***--**---*--*    ")
-print(f"                     NL Chocolate CO Employee Travel Claim ")
-print(f"                     *--*---**--***---***---***--**---*--*                         ")
-print(f"")
-print(f"Employee Name: {first_name} {last_name}   ")
-print(f"Employee Number:{emp_num}                             Claim Type:{claim_type}   ")
-print(f"Car type:{car}                     ")
-print(f"Trip Location:{trip_loc}                                       ")
-print(f"Departure:{start_date_dsp:<9}   ")
-print(f"Return:{end_date_dsp:<9}")
-print(f"Number of Days:{num_days}                                  Per Diem----------------{perdiem_dsp:>8}                                ")
-print(f"Total KM:{tot_km_dsp}                                  Mileage Amount----------{mile_amt_dsp:>8}")
-print(f"                                                  Bonus-------------------{bonus_dsp:>8}")
-print(f"                                                  HST---------------------{hst_dsp:>8} ")
-print(f"                                                  Total-------------------{claim_total_dsp:>8}")
-print(f"")
-print(f"-----------------------------------------------------------------------------------")
+    print(f"")
+    print(f"                     *--*---**--***---***---***--**---*--*    ")
+    print(f"                     NL Chocolate CO Employee Travel Claim ")
+    print(f"                     *--*---**--***---***---***--**---*--*                         ")
+    print(f"")
+    print(f"Employee Name: {first_name} {last_name}   ")
+    print(f"Employee Number:{emp_num}                             Claim Type:{claim_type}   ")
+    print(f"Car type:{car}                     ")
+    print(f"Trip Location:{trip_loc}                                       ")
+    print(f"Departure:{start_date_dsp:<9}   ")
+    print(f"Return:{end_date_dsp:<9}")
+    print(f"Number of Days:{num_days}                                  Per Diem----------------{perdiem_dsp:>8}                                ")
+    print(f"Total KM:{tot_km_dsp}                                  Mileage Amount----------{mile_amt_dsp:>8}")
+    print(f"                                                  Bonus-------------------{bonus_dsp:>8}")
+    print(f"                                                  HST---------------------{hst_dsp:>8} ")
+    print(f"                                                  Total-------------------{claim_total_dsp:>8}")
+    print(f"")
+    print(f"-----------------------------------------------------------------------------------")
+
+NLCCTravelClaim():
+
 
 def display_menu():
     """Displays the menu options to the user."""
@@ -190,9 +250,11 @@ while choice != 5:
         pass
     else:
         print("Invalid input. Please enter a number between 1 and 5.")
-        
+
     # get user input again
     display_menu()
     choice = validate_input()
 
 print("Thank you for using the Travel Claims Processing System!")
+
+NLCCTravelClaim():
