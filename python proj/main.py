@@ -1,5 +1,4 @@
 import datetime
-
 import console
 
 # main program menu
@@ -105,8 +104,6 @@ def ncc_travel():
     num_days = (end_date - start_date).days
     perdiem = (num_days * perdiem_rate)
 
-   # if car == "O":
-    #    mile_amt = mileage_rate * tot_km
     if car == "R":
         mile_amt = num_days * 65.00
     else:
@@ -260,6 +257,7 @@ def console():
 
 
 def choice_func(val):
+    #This function takes in a single argument 'val' and uses it to execute different functions based on the user's choice
     while val != 5:
         if val == 1:
             ncc_travel()
@@ -276,5 +274,32 @@ def choice_func(val):
 display_menu()
 choice = validate_input()
 choice_func(choice)
+
+#ONE EXTRA FUNCTION
+'''
+def bodymassindex(height, weight):
+    #Function to determine BMI based on height and weight
+    return round((weight / height ** 2), 2)
+
+h = float(input("Enter your height in meters: "))
+w = float(input("Enter your weight in kg: "))
+
+
+
+
+bmi = bodymassindex(h, w)
+
+print(f"Your BMI is:{bmi} ")
+
+if bmi <= 18.5:
+    print("You are underweight.")
+elif 18.5 < bmi <= 24.9:
+    print("Your weight is normal.")
+elif 25 < bmi <= 29.29:
+    print("You are overweight.")
+else:
+    print("You are obese.")
+'''
+
 
 
