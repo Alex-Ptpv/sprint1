@@ -1,3 +1,6 @@
+import datetime
+
+# main program menu
 
 def display_menu():
     """Displays the menu options to the user."""
@@ -22,10 +25,9 @@ def validate_input():
             print("Invalid input. Please enter a number between 1 and 5.")
 
 
+
 def ncc_travel():
     # Newfoundland Chocolate Co. Travel Claim
-
-    import datetime
 
     perdiem_rate = float(85)
     mileage_rate = float(.17)
@@ -187,12 +189,9 @@ def ncc_travel():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
+    choise_func(choice)
 
-
-
-
-
-
+# FizzBuzz task
 
 def fizz_buzz():
     for num in range(100):
@@ -207,16 +206,10 @@ def fizz_buzz():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
-
-
-
-
-
-
+    choise_func(choice)
 
 def emp_inf():
     import datetime
-
 
     # Employee information
     first_name = "John"
@@ -241,11 +234,7 @@ def emp_inf():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
-
-
-
-
-
+    choise_func(choice)
 
 def console():
 
@@ -265,23 +254,25 @@ def console():
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
+    choise_func(choice)
 
 
-# main program
+def choise_func(val):
+    while val != 5:
+        if val == 1:
+            ncc_travel()
+        elif val == 2:
+            fizz_buzz()
+        elif val == 3:
+            emp_inf()
+        elif val == 4:
+            console()
+    if val == 5:
+        print("thanks for using the Travel Claims Processing System")
+        exit
+
 display_menu()
-choice = validate_input()
+choise = validate_input()
+choise_func(choise)
 
-while choice != 5:
-    if choice == 1:
-        ncc_travel()
-    elif choice == 2:
-        fizz_buzz()
-    elif choice == 3:
-        emp_inf()
-    elif choice == 4:
-       console()
-    else:
-        print("Invalid input. Please enter a number between 1 and 5.")
-if choice == 5:
-    print("thanks for using the Travel Claims Processing System")
-    exit
+
