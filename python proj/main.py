@@ -193,15 +193,16 @@ def ncc_travel():
 # FizzBuzz task
 
 def fizz_buzz():
-    for num in range(100):
-        if num % 5 == 0 and num % 8 != 0:
-            print("Fizz")
-        elif num % 8 == 0 and num % 5 != 0:
-            print("Buzz")
-        elif num % 5 == 0 and num % 8 == 0:
+    for num in range(1, 101):
+        if num % 5 == 0 and num % 8 == 0:
             print("FizzBuzz")
+        elif num % 8 == 0:
+            print("Buzz")
+        elif num % 5 == 0:
+            print("Fizz")
         else:
             print(num)
+            
     input("Press any key to continue...")
     display_menu()
     choice = validate_input()
